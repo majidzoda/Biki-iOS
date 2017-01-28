@@ -26,13 +26,13 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     // MARK: Fields
     private var store: LineStore!
     private var snowAreaStore: SnowAreaStore!
-    private var rainAreaStire: RainAreaStore!
+    private var rainAreaStore: RainAreaStore!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         lineConfiguration()
-        snowConfiguration()
         rainConfiguration()
+        snowConfiguration()
         googleMapViewConfiguration()
         
 //        getSnow()
@@ -49,7 +49,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     private func rainConfiguration(){
-        rainAreaStire = RainAreaStore()
+        rainAreaStore = RainAreaStore()
         getRainArea()
     }
     
@@ -69,6 +69,9 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             print(lat)
             print(lon)
             riskLevel(params: ["Lon": lon, "Lat": lat])
+            
+            getLiveWeatherAndDrawOnMap(lat: Double(lat)!, lon: Double(lon)!)
+            
         } else {
             print("User's location is unknown")
         }
@@ -193,6 +196,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     
+    // MARK: Live wheather (Cely)
+    private func getLiveWeatherAndDrawOnMap(lat: Double, lon: Double){
+        // Develope codes for getting a live weather result.
+        
+        // TODO: call getSnowArea() method if you get snow 
+        // TODO call getRainArea() method if you get rain
+    }
+    
+    
     // MARK: Snow
     
     private func getSnowArea(){
@@ -204,7 +216,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
                 print("Successfully found \(areas.count) snow areas.")
                 // TODO: Draw snow area
                 for area in areas{
-                   self.overlayImageTest(area: area)
+                   self.drawPolygonForSnowAreaTest(area: area)
                 }
                 
             case let .Failure(error):
@@ -213,17 +225,38 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         }
     }
     
+    private func drawPolygonForSnowAreaTest(area: SnowArea){
+        // Create a rectangular path
+        let rect = GMSMutablePath()
+        
+        for point in area.points {
+            rect.add(CLLocationCoordinate2D(latitude: point.lon, longitude: point.lat))
+        }
+        
+        
+        
+        // Create the polygon, and assign it to the map.
+        let polygon = GMSPolygon(path: rect)
+        polygon.fillColor = .blue
+        polygon.strokeColor = .blue
+        polygon.strokeWidth = 2
+        polygon.map = googleMapView
+    }
+    
     
     // MARK: Rain
     
     private func getRainArea(){
-        snowAreaStore.fetchSnowAreas{
+        rainAreaStore.fetchRainAreas{
             (snowAreaResult) -> Void in
             
             switch snowAreaResult {
             case let .Success(areas):
                 print("Successfully found \(areas.count) rain areas.")
             // TODO: Draw snow area
+                for area in areas {
+                    self.drawPolygonForRainAreaTest(area: area)
+                }
                 
             case let .Failure(error):
                 print("Error fetching rain areas: \(error)")
@@ -232,20 +265,20 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     
-    private func overlayImageTest(area: SnowArea){
+    private func drawPolygonForRainAreaTest(area: RainArea){
         // Create a rectangular path
         let rect = GMSMutablePath()
         
         for point in area.points {
-           rect.add(CLLocationCoordinate2D(latitude: point.lon, longitude: point.lat))
+            rect.add(CLLocationCoordinate2D(latitude: point.lon, longitude: point.lat))
         }
         
-    
+        
         
         // Create the polygon, and assign it to the map.
         let polygon = GMSPolygon(path: rect)
-        polygon.fillColor = .blue
-        polygon.strokeColor = .blue
+        polygon.fillColor = .green
+        polygon.strokeColor = .green
         polygon.strokeWidth = 2
         polygon.map = googleMapView
     }
