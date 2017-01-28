@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		916BE32A1DD2CF8900B89470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916BE3291DD2CF8900B89470 /* AppDelegate.swift */; };
+		916BE32F1DD2CF8900B89470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 916BE32D1DD2CF8900B89470 /* Main.storyboard */; };
+		916BE3311DD2CF8900B89470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916BE3301DD2CF8900B89470 /* Assets.xcassets */; };
+		916BE3341DD2CF8900B89470 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 916BE3321DD2CF8900B89470 /* LaunchScreen.storyboard */; };
+		916BE33C1DD2D06C00B89470 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916BE33B1DD2D06C00B89470 /* MapViewController.swift */; };
+		916BE33E1DD2F25400B89470 /* BikiAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916BE33D1DD2F25400B89470 /* BikiAPI.swift */; };
+		916BE3401DD2F32B00B89470 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916BE33F1DD2F32B00B89470 /* Line.swift */; };
+		916BE3421DD2F3D700B89470 /* LineStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916BE3411DD2F3D700B89470 /* LineStore.swift */; };
+		91758AEF1E2D6F8A00CAA5F9 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91758AEE1E2D6F8A00CAA5F9 /* Point.swift */; };
+		91758AF11E2D856C00CAA5F9 /* SnowArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91758AF01E2D856C00CAA5F9 /* SnowArea.swift */; };
+		91758AF31E2D859E00CAA5F9 /* SnowAreaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91758AF21E2D859E00CAA5F9 /* SnowAreaStore.swift */; };
+		91758AF61E2D903400CAA5F9 /* RainArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91758AF51E2D903400CAA5F9 /* RainArea.swift */; };
+		91758AF81E2D905F00CAA5F9 /* RainAreaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91758AF71E2D905F00CAA5F9 /* RainAreaStore.swift */; };
+		B1EEF0855128B84276F5986F /* Pods_Biki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFEDAEFA16406BCDC2F2DA7 /* Pods_Biki.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E3147D2F435B273ABE3F739 /* Pods-Biki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Biki.release.xcconfig"; path = "Pods/Target Support Files/Pods-Biki/Pods-Biki.release.xcconfig"; sourceTree = "<group>"; };
+		916BE3261DD2CF8900B89470 /* Biki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biki.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		916BE3291DD2CF8900B89470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		916BE32E1DD2CF8900B89470 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		916BE3301DD2CF8900B89470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		916BE3331DD2CF8900B89470 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		916BE3351DD2CF8900B89470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		916BE33B1DD2D06C00B89470 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		916BE33D1DD2F25400B89470 /* BikiAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikiAPI.swift; sourceTree = "<group>"; };
+		916BE33F1DD2F32B00B89470 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		916BE3411DD2F3D700B89470 /* LineStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineStore.swift; sourceTree = "<group>"; };
+		91758AEE1E2D6F8A00CAA5F9 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		91758AF01E2D856C00CAA5F9 /* SnowArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowArea.swift; sourceTree = "<group>"; };
+		91758AF21E2D859E00CAA5F9 /* SnowAreaStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowAreaStore.swift; sourceTree = "<group>"; };
+		91758AF51E2D903400CAA5F9 /* RainArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainArea.swift; sourceTree = "<group>"; };
+		91758AF71E2D905F00CAA5F9 /* RainAreaStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainAreaStore.swift; sourceTree = "<group>"; };
+		C07DC049DB37E73070750722 /* Pods-Biki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Biki.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Biki/Pods-Biki.debug.xcconfig"; sourceTree = "<group>"; };
+		DAFEDAEFA16406BCDC2F2DA7 /* Pods_Biki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Biki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		916BE3231DD2CF8900B89470 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1EEF0855128B84276F5986F /* Pods_Biki.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F63640D10C9EE6293208C8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C07DC049DB37E73070750722 /* Pods-Biki.debug.xcconfig */,
+				1E3147D2F435B273ABE3F739 /* Pods-Biki.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		916BE31D1DD2CF8900B89470 = {
+			isa = PBXGroup;
+			children = (
+				916BE3281DD2CF8900B89470 /* Biki */,
+				916BE3271DD2CF8900B89470 /* Products */,
+				1F63640D10C9EE6293208C8B /* Pods */,
+				F81B7B835979B0520DDC78C9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		916BE3271DD2CF8900B89470 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				916BE3261DD2CF8900B89470 /* Biki.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		916BE3281DD2CF8900B89470 /* Biki */ = {
+			isa = PBXGroup;
+			children = (
+				916BE3291DD2CF8900B89470 /* AppDelegate.swift */,
+				916BE32D1DD2CF8900B89470 /* Main.storyboard */,
+				916BE3301DD2CF8900B89470 /* Assets.xcassets */,
+				916BE3321DD2CF8900B89470 /* LaunchScreen.storyboard */,
+				916BE3351DD2CF8900B89470 /* Info.plist */,
+				916BE33B1DD2D06C00B89470 /* MapViewController.swift */,
+				91758AEA1E2D6C6C00CAA5F9 /* Line */,
+				91758AEB1E2D6C8000CAA5F9 /* Snow */,
+				91758AF41E2D901D00CAA5F9 /* Rain */,
+				91758AF91E2D927600CAA5F9 /* RiskLevel */,
+				916BE33D1DD2F25400B89470 /* BikiAPI.swift */,
+			);
+			path = Biki;
+			sourceTree = "<group>";
+		};
+		91758AEA1E2D6C6C00CAA5F9 /* Line */ = {
+			isa = PBXGroup;
+			children = (
+				916BE33F1DD2F32B00B89470 /* Line.swift */,
+				916BE3411DD2F3D700B89470 /* LineStore.swift */,
+			);
+			name = Line;
+			sourceTree = "<group>";
+		};
+		91758AEB1E2D6C8000CAA5F9 /* Snow */ = {
+			isa = PBXGroup;
+			children = (
+				91758AEE1E2D6F8A00CAA5F9 /* Point.swift */,
+				91758AF01E2D856C00CAA5F9 /* SnowArea.swift */,
+				91758AF21E2D859E00CAA5F9 /* SnowAreaStore.swift */,
+			);
+			name = Snow;
+			sourceTree = "<group>";
+		};
+		91758AF41E2D901D00CAA5F9 /* Rain */ = {
+			isa = PBXGroup;
+			children = (
+				91758AF51E2D903400CAA5F9 /* RainArea.swift */,
+				91758AF71E2D905F00CAA5F9 /* RainAreaStore.swift */,
+			);
+			name = Rain;
+			sourceTree = "<group>";
+		};
+		91758AF91E2D927600CAA5F9 /* RiskLevel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RiskLevel;
+			sourceTree = "<group>";
+		};
+		F81B7B835979B0520DDC78C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAFEDAEFA16406BCDC2F2DA7 /* Pods_Biki.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		916BE3251DD2CF8900B89470 /* Biki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 916BE3381DD2CF8900B89470 /* Build configuration list for PBXNativeTarget "Biki" */;
+			buildPhases = (
+				4228FC19385042706579F3EE /* [CP] Check Pods Manifest.lock */,
+				916BE3221DD2CF8900B89470 /* Sources */,
+				916BE3231DD2CF8900B89470 /* Frameworks */,
+				916BE3241DD2CF8900B89470 /* Resources */,
+				E02686BABC18C8A09FA3EFFE /* [CP] Embed Pods Frameworks */,
+				D235FD5D67A2B3317BC8D5DB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Biki;
+			productName = Biki;
+			productReference = 916BE3261DD2CF8900B89470 /* Biki.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		916BE31E1DD2CF8900B89470 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Biki;
+				TargetAttributes = {
+					916BE3251DD2CF8900B89470 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = M83TUL5J88;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 916BE3211DD2CF8900B89470 /* Build configuration list for PBXProject "Biki" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 916BE31D1DD2CF8900B89470;
+			productRefGroup = 916BE3271DD2CF8900B89470 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				916BE3251DD2CF8900B89470 /* Biki */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		916BE3241DD2CF8900B89470 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				916BE3341DD2CF8900B89470 /* LaunchScreen.storyboard in Resources */,
+				916BE3311DD2CF8900B89470 /* Assets.xcassets in Resources */,
+				916BE32F1DD2CF8900B89470 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4228FC19385042706579F3EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D235FD5D67A2B3317BC8D5DB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Biki/Pods-Biki-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E02686BABC18C8A09FA3EFFE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Biki/Pods-Biki-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		916BE3221DD2CF8900B89470 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				916BE32A1DD2CF8900B89470 /* AppDelegate.swift in Sources */,
+				91758AF61E2D903400CAA5F9 /* RainArea.swift in Sources */,
+				91758AF11E2D856C00CAA5F9 /* SnowArea.swift in Sources */,
+				916BE3401DD2F32B00B89470 /* Line.swift in Sources */,
+				91758AF31E2D859E00CAA5F9 /* SnowAreaStore.swift in Sources */,
+				916BE3421DD2F3D700B89470 /* LineStore.swift in Sources */,
+				91758AF81E2D905F00CAA5F9 /* RainAreaStore.swift in Sources */,
+				916BE33E1DD2F25400B89470 /* BikiAPI.swift in Sources */,
+				91758AEF1E2D6F8A00CAA5F9 /* Point.swift in Sources */,
+				916BE33C1DD2D06C00B89470 /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		916BE32D1DD2CF8900B89470 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				916BE32E1DD2CF8900B89470 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		916BE3321DD2CF8900B89470 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				916BE3331DD2CF8900B89470 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		916BE3361DD2CF8900B89470 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		916BE3371DD2CF8900B89470 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		916BE3391DD2CF8900B89470 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C07DC049DB37E73070750722 /* Pods-Biki.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M83TUL5J88;
+				INFOPLIST_FILE = Biki/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = biki.nyc.Biki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		916BE33A1DD2CF8900B89470 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E3147D2F435B273ABE3F739 /* Pods-Biki.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M83TUL5J88;
+				INFOPLIST_FILE = Biki/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = biki.nyc.Biki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		916BE3211DD2CF8900B89470 /* Build configuration list for PBXProject "Biki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				916BE3361DD2CF8900B89470 /* Debug */,
+				916BE3371DD2CF8900B89470 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		916BE3381DD2CF8900B89470 /* Build configuration list for PBXNativeTarget "Biki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				916BE3391DD2CF8900B89470 /* Debug */,
+				916BE33A1DD2CF8900B89470 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 916BE31E1DD2CF8900B89470 /* Project object */;
+}

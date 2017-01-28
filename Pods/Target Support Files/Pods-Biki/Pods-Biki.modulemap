@@ -1,0 +1,6 @@
+framework module Pods_Biki {
+  umbrella header "Pods-Biki-umbrella.h"
+
+  export *
+  module * { export * }
+}
