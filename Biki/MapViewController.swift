@@ -70,7 +70,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             print(lon)
             riskLevel(params: ["Lon": lon, "Lat": lat])
             
-            getLiveWeatherAndDrawOnMap(lat: Double(lat), lon: Double(lon))
+            getLiveWeatherAndDrawOnMap(lat: Double(lat)!, lon: Double(lon)!)
             
         } else {
             print("User's location is unknown")
