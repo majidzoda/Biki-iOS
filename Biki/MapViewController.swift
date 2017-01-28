@@ -69,6 +69,9 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             print(lat)
             print(lon)
             riskLevel(params: ["Lon": lon, "Lat": lat])
+            
+            getLiveWeatherAndDrawOnMap(lat: Double(lat), lon: Double(lon))
+            
         } else {
             print("User's location is unknown")
         }
@@ -190,6 +193,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         default:
             break
         }
+    }
+    
+    
+    // MARK: Live wheather (Cely)
+    private func getLiveWeatherAndDrawOnMap(lat: Double, lon: Double){
+        // Develope codes for getting a live weather result.
+        
+        // TODO: call getSnowArea() method if you get snow 
+        // TODO call getRainArea() method if you get rain
     }
     
     
