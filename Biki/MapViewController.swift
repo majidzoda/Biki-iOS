@@ -27,15 +27,27 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     private var store: LineStore!
     private var snowAreaStore: SnowAreaStore!
     private var rainAreaStore: RainAreaStore!
+    
+    var currentWeather: CurrentWeather!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         lineConfiguration()
-        rainConfiguration()
-        snowConfiguration()
         googleMapViewConfiguration()
-        
-//        getSnow()
+
+        if googleMapView.myLocation != nil {
+            print(googleMapView.myLocation?.coordinate as Any)
+            guard let lat = googleMapView.myLocation?.coordinate.latitude.description,
+                let lon = googleMapView.myLocation?.coordinate.longitude.description else {
+                    print("no lat and lon")
+                    return
+            }
+            currentWeatherConfiguration(lat: Double(lat)!, lon: Double(lon)!)
+            
+        } else {
+            print("User's location is unknown")
+        }
+
     }
     
     private func lineConfiguration(){
@@ -43,14 +55,32 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         getLines()
     }
     
-    private func snowConfiguration(){
-        snowAreaStore = SnowAreaStore()
-        getSnowArea()
-    }
-    
-    private func rainConfiguration(){
-        rainAreaStore = RainAreaStore()
-        getRainArea()
+    private func currentWeatherConfiguration(lat: Double, lon: Double){
+        currentWeather = CurrentWeather(lat: lat, lon: lon)
+        
+        currentWeather.downloadWeatherDetails {
+            switch self.currentWeather.weatherType{
+            case "Rain Mini":
+                self.rainAreaStore = RainAreaStore()
+                self.getRainArea()
+            case "Rain":
+                self.rainAreaStore = RainAreaStore()
+                self.getRainArea()
+            case "Snow":
+                self.snowAreaStore = SnowAreaStore()
+                self.getSnowArea()
+            case "Snow Mini":
+                self.snowAreaStore = SnowAreaStore()
+                self.getSnowArea()
+            case "Thunderstorm Mini":
+                self.rainAreaStore = RainAreaStore()
+                self.getRainArea()
+            case "Thunderstorm":
+                self.rainAreaStore = RainAreaStore()
+                self.getRainArea()
+            default: break
+            }
+        }
     }
     
     private func googleMapViewConfiguration(){
@@ -70,7 +100,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             print(lon)
             riskLevel(params: ["Lon": lon, "Lat": lat])
             
-            getLiveWeatherAndDrawOnMap(lat: Double(lat)!, lon: Double(lon)!)
+            currentWeatherConfiguration(lat: Double(lat)!, lon: Double(lon)!)
             
         } else {
             print("User's location is unknown")
@@ -196,13 +226,29 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     
-    // MARK: Live wheather (Cely)
-    private func getLiveWeatherAndDrawOnMap(lat: Double, lon: Double){
-        // Develope codes for getting a live weather result.
-        
-        // TODO: call getSnowArea() method if you get snow 
-        // TODO call getRainArea() method if you get rain
+    // MARK: Simulate Rain
+    
+    @IBAction func simulateRain(_ sender: Any) {
+        rainConfiguration()
     }
+    
+    private func rainConfiguration(){
+        rainAreaStore = RainAreaStore()
+        getRainArea()
+    }
+    
+    
+    // MARK: Simulate Snow
+    
+    @IBAction func simulateSnow(_ sender: Any) {
+        snowConfiguration()
+    }
+    
+    private func snowConfiguration(){
+        snowAreaStore = SnowAreaStore()
+        getSnowArea()
+    }
+    
     
     
     // MARK: Snow
