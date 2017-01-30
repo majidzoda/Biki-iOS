@@ -22,58 +22,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bY4-xY-N9b">
-                                <rect key="frame" x="172" y="30" width="30" height="30"/>
-                                <state key="normal" title="test"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bY4-xY-N9b">
+                                <rect key="frame" x="121" y="30" width="50" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="ls6-ub-Frj"/>
+                                </constraints>
+                                <state key="normal" title="Run" backgroundImage="button2">
+                                    <color key="titleShadowColor" red="1" green="0.058502750579999999" blue="0.063476367919999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="playSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xui-V9-leu"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWf-yi-OLz" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
-                                <subviews>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snow" translatesAutoresizingMaskIntoConstraints="NO" id="gqY-p3-ND3">
-                                        <rect key="frame" x="183" y="294" width="10" height="10"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="0pc-KC-Szp"/>
-                                            <constraint firstAttribute="width" constant="10" id="Ko1-Qn-uVy"/>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="LgI-TB-y4I"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="RFT-KT-tti"/>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="qsH-wW-yFg"/>
-                                            <constraint firstAttribute="height" constant="10" id="voE-cx-IWD"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
+                                <rect key="frame" x="0.0" y="133" width="375" height="534"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="gqY-p3-ND3" firstAttribute="centerY" secondItem="gWf-yi-OLz" secondAttribute="centerY" id="SEo-sP-EAX"/>
-                                    <constraint firstItem="gqY-p3-ND3" firstAttribute="centerX" secondItem="gWf-yi-OLz" secondAttribute="centerX" id="w5e-o3-CYl"/>
-                                </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FXp-SO-f8i">
-                                <rect key="frame" x="16" y="30" width="151" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Risk Level" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FXp-SO-f8i">
+                                <rect key="frame" x="16" y="39" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="DSk-mD-HEN"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2H-AE-uHR">
-                                <rect key="frame" x="354" y="45" width="0.0" height="0.0"/>
+                                <rect key="frame" x="354" y="54" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hto-Fw-KnG">
+                                <rect key="frame" x="121" y="79" width="101" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="VYx-0d-Pyg"/>
+                                </constraints>
+                                <state key="normal" title="Simulate Snow" backgroundImage="button2"/>
+                                <connections>
+                                    <action selector="simulateSnow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BXt-1X-unY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBv-3m-Zgp">
+                                <rect key="frame" x="16" y="79" width="100" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="JQB-T0-HaN"/>
+                                </constraints>
+                                <state key="normal" title="Simulate Rain" backgroundImage="button2"/>
+                                <connections>
+                                    <action selector="simulateRain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3g6-3T-SIc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gWf-yi-OLz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="7ka-i8-YCI"/>
+                            <constraint firstItem="Hto-Fw-KnG" firstAttribute="leading" secondItem="sBv-3m-Zgp" secondAttribute="trailing" constant="5" id="2HA-Eu-iUi"/>
+                            <constraint firstItem="sBv-3m-Zgp" firstAttribute="top" secondItem="FXp-SO-f8i" secondAttribute="bottom" constant="10" id="9vW-Ct-nG3"/>
                             <constraint firstAttribute="trailing" secondItem="gWf-yi-OLz" secondAttribute="trailing" id="FVU-CE-suc"/>
                             <constraint firstItem="FXp-SO-f8i" firstAttribute="centerY" secondItem="bY4-xY-N9b" secondAttribute="centerY" id="P7B-Zh-Pf2"/>
-                            <constraint firstItem="bY4-xY-N9b" firstAttribute="leading" secondItem="FXp-SO-f8i" secondAttribute="trailing" constant="5" id="VG8-Yq-o02"/>
+                            <constraint firstItem="sBv-3m-Zgp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SIN-e3-Kwu"/>
+                            <constraint firstItem="bY4-xY-N9b" firstAttribute="leading" secondItem="FXp-SO-f8i" secondAttribute="trailing" constant="25" id="VG8-Yq-o02"/>
+                            <constraint firstItem="gWf-yi-OLz" firstAttribute="top" secondItem="sBv-3m-Zgp" secondAttribute="bottom" constant="5" id="VJJ-gk-KC7"/>
+                            <constraint firstItem="Hto-Fw-KnG" firstAttribute="centerY" secondItem="sBv-3m-Zgp" secondAttribute="centerY" id="WX9-YE-Kwk"/>
                             <constraint firstItem="bY4-xY-N9b" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="bHg-4D-tEG"/>
                             <constraint firstItem="Y2H-AE-uHR" firstAttribute="centerY" secondItem="bY4-xY-N9b" secondAttribute="centerY" id="di4-w9-IHF"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gWf-yi-OLz" secondAttribute="bottom" id="gLt-DW-eXK"/>
                             <constraint firstItem="gWf-yi-OLz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jKE-rQ-h0B"/>
-                            <constraint firstItem="bY4-xY-N9b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p1K-T6-rPB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Y2H-AE-uHR" secondAttribute="trailing" constant="5" id="w49-5h-Rco"/>
                             <constraint firstItem="FXp-SO-f8i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="y8n-ac-8fW"/>
                         </constraints>
@@ -81,7 +101,6 @@
                     <connections>
                         <outlet property="googleMapView" destination="gWf-yi-OLz" id="jNR-f2-FJj"/>
                         <outlet property="riskLevelLabel" destination="Y2H-AE-uHR" id="p8u-O6-Vza"/>
-                        <outlet property="snowImage" destination="gqY-p3-ND3" id="WYC-X2-URM"/>
                         <outlet property="soundId" destination="FXp-SO-f8i" id="vTD-7r-mXq"/>
                     </connections>
                 </viewController>
@@ -91,6 +110,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="snow" width="150" height="150"/>
+        <image name="button2" width="282" height="49"/>
     </resources>
 </document>
